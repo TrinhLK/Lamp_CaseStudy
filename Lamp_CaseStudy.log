@@ -1,0 +1,94 @@
+Tunneling executor handler for executor BIPComponent=(type = elements.VirtualMachine, hashCode = 1220247140) and bipSpec components.VirtualMachine@7e5ce60d has been created.
+********************************* Register *************************************
+Component : components.VirtualMachine@7e5ce60d
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.VirtualMachine, hashCode = 98199002) and bipSpec components.VirtualMachine@ec254a9 has been created.
+********************************* Register *************************************
+Component : components.VirtualMachine@ec254a9
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Components, hashCode = 1114961495) and bipSpec components.MySQL@4a413dcc has been created.
+********************************* Register *************************************
+Component : components.MySQL@4a413dcc
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Components, hashCode = 2010397160) and bipSpec components.MySQL@1f13e260 has been created.
+********************************* Register *************************************
+Component : components.MySQL@1f13e260
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Tomcat, hashCode = 2124196220) and bipSpec components.Tomcat@4b43a6b9 has been created.
+********************************* Register *************************************
+Component : components.Tomcat@4b43a6b9
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Tomcat, hashCode = 906767247) and bipSpec components.Tomcat@2ea8a202 has been created.
+********************************* Register *************************************
+Component : components.Tomcat@2ea8a202
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Apache, hashCode = 1578861051) and bipSpec components.Apache@5da40328 has been created.
+********************************* Register *************************************
+Component : components.Apache@5da40328
+******************************************************************************
+Tunneling executor handler for executor BIPComponent=(type = elements.Apache, hashCode = 288305799) and bipSpec components.Apache@3d5de1ed has been created.
+********************************* Register *************************************
+Component : components.Apache@3d5de1ed
+******************************************************************************
+Engine thread is started.
+Glue constraints added to existing total BDD.
+Invocation: start
+Invocation: start
+vm2: is on	-
+
+vm1: is on	-
+
+Invocation: active
+Invocation: active
+vm1: is running	-
+
+vm2: is running	-
+
+Invocation: deploy
+Invocation: running
+mysql1: is deployed on {vm2-Running-1}	-----
+
+vm1: is running	-
+
+Invocation: deploy
+Invocation: running
+vm1: is running	-
+
+apache2: is deployed on {vm2-Running-1}	-----
+
+Invocation: deploy
+Invocation: running
+apache1: is deployed on {vm2-Running-1}	-----
+
+vm2: is running	-
+
+Invocation: deploy
+Invocation: running
+mysql2: is deployed on {vm2-Running-2}	-----
+
+vm1: is running	-
+
+Invocation: start
+Invocation: running
+mysql2: is running on {vm2-Running-2}	-----
+
+vm2: is running	-
+
+Invocation: start
+Invocation: running
+mysql1: is running on {vm2-Running-3}	-----
+
+vm1: is running	-
+
+Invocation: stop
+Invocation: fail
+Invocation: configure
+Invocation: stop
+apache1: is configuring	-----
+
+apache2 {Deployed}: FAILED	-----
+
+mysql1: is stopped	-----
+
+mysql2: is stopped	-----
+
