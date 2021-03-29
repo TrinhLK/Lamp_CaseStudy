@@ -1,4 +1,4 @@
-package components;
+package smallerexample;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -45,7 +45,7 @@ public class MySQL {
 	 * PORTS
 	 * */
 	@Transitions({
-		@Transition(name = "deploy", source = "Undeployed", target = "Deployed", guard = "canDeploy")
+		@Transition(name = "deploy", source = "Undeployed", target = "Deployed", guard = "canDeploy"),
 	})
 	public void deploy() {
 		logger.info(id + ": is deployed on {" + vId + "}\t-----\n");
@@ -63,6 +63,7 @@ public class MySQL {
 		state = Components_States.Undeployed;
 		runningTime = 0;
 	}
+	
 	@Transitions({
 		@Transition(name = "start", source = "Deployed", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
@@ -72,10 +73,11 @@ public class MySQL {
 	public void start() {
 		logger.info(id + ": is running on {" + vId + "}\t-----\n");
 		state = Components_States.Active;
+		runningTime++;
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
+		@Transition(name = "fail", source = "Active", target = "Error", guard = "canFail"),
 	})
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
@@ -86,7 +88,7 @@ public class MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "")
+		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "canStop"),
 	})
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
@@ -124,9 +126,20 @@ public class MySQL {
 		return false;
 	}
 	
+	@Guard(name = "canStop")
+	public boolean canStop() {		
+		return false;
+	}
+	
+	@Guard(name = "canFail")
+	public boolean canFail() {		
+		return (runningTime > 5);
+	}
+	
 	@Guard(name = "canDeploy")
 	public boolean canDeploy(@Data(name = "vId") String _vId) {
 		if (_vId.contains("Running")) {
+//			logger.info(id + " check can Start: " + true);
 			vId = _vId;
 			return true;
 		}

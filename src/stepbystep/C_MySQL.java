@@ -1,4 +1,4 @@
-package components;
+package stepbystep;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -21,22 +21,22 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "stop", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.spontaneous)
 })
-@ComponentType(initial = "Undeployed", name = "elements.MySQL")
-public class MySQL {
+@ComponentType(initial = "Undeployed", name = "steps.MySQL")
+public class C_MySQL {
 
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(MySQL.class);
+	static final Logger logger = LoggerFactory.getLogger(C_MySQL.class);
 	String vId;
 	String depInfor;
 	VM_States vStates;
 	int runningTime;
 	
-	public MySQL() {
+	public C_MySQL() {
 		state = Components_States.Undeployed;
 	}
 	
-	public MySQL(String _id) {
+	public C_MySQL(String _id) {
 		id = _id;
 		state = Components_States.Undeployed;
 	}
@@ -45,7 +45,7 @@ public class MySQL {
 	 * PORTS
 	 * */
 	@Transitions({
-		@Transition(name = "deploy", source = "Undeployed", target = "Deployed", guard = "canDeploy")
+		@Transition(name = "deploy", source = "Undeployed", target = "Deployed", guard = "canDeploy"),
 	})
 	public void deploy() {
 		logger.info(id + ": is deployed on {" + vId + "}\t-----\n");
@@ -63,15 +63,18 @@ public class MySQL {
 		state = Components_States.Undeployed;
 		runningTime = 0;
 	}
+	
 	@Transitions({
 		@Transition(name = "start", source = "Deployed", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
+		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start() {
 		logger.info(id + ": is running on {" + vId + "}\t-----\n");
 		state = Components_States.Active;
+		runningTime++;
 	}
 	
 	@Transitions({
@@ -86,7 +89,7 @@ public class MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "")
+		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "canStop"),
 	})
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
@@ -96,13 +99,12 @@ public class MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
+//		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
 		@Transition(name = "configure", source = "Deployed", target = "Inactive", guard = "")
 	})
 	public void configure() {
 		logger.info(id + ": is configuring" + "\t-----\n");
 		state = Components_States.Inactive;
-		depInfor = "";
 		runningTime = 0;
 	}
 	
@@ -116,6 +118,7 @@ public class MySQL {
 	
 	@Guard(name = "canStart")
 	public boolean canStart(@Data(name = "vId") String _vId) {
+//		logger.info(id + " - check data:" + _vId);
 		if (_vId.contains("Running")) {
 			vId = _vId;
 			return true;
@@ -124,9 +127,20 @@ public class MySQL {
 		return false;
 	}
 	
+	@Guard(name = "canStop")
+	public boolean canStop() {		
+		return false;
+	}
+	
+	@Guard(name = "canFail")
+	public boolean canFail() {		
+		return (runningTime > 5);
+	}
+	
 	@Guard(name = "canDeploy")
 	public boolean canDeploy(@Data(name = "vId") String _vId) {
 		if (_vId.contains("Running")) {
+//			logger.info(id + " check can Start: " + true);
 			vId = _vId;
 			return true;
 		}

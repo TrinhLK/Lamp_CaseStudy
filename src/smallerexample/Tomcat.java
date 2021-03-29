@@ -1,4 +1,4 @@
-package components;
+package smallerexample;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -68,6 +68,7 @@ public class Tomcat {
 		@Transition(name = "start", source = "Deployed", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
+		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start() {
@@ -76,24 +77,37 @@ public class Tomcat {
 		//depInfor = "";
 	}
 	
-	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "")
-	})
-	public void stop() {
-		logger.info(id + ": is stopped" + "\t-----\n");
-		state = Components_States.Inactive;
-		depInfor = "";
-		runningTime = 0;
-	}
+//	@Transitions({
+//		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "canStopTomcat")
+//	})
+//	public void stop() {
+//		logger.info(id + ": is stopped" + "\t-----\n");
+//		state = Components_States.Inactive;
+//		depInfor = "";
+//		runningTime = 0;
+//	}
 	
 	@Transitions({
-		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
+//		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
 		@Transition(name = "configure", source = "Deployed", target = "Inactive", guard = "")
 	})
 	public void configure() {
 		logger.info(id + ": is configuring" + "\t-----\n");
 		state = Components_States.Inactive;
 		depInfor = "";
+		runningTime = 0;
+	}
+	
+	@Transitions({
+		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "canStopTomcat"),
+//		@Transition(name = "stop", source = "Deployed", target = "Stopped", guard = ""),
+//		@Transition(name = "stop", source = "Inactive", target = "Stopped", guard = "")
+	})
+	public void stop1() {
+		logger.info(id + " {" + state + "}: STOPPED" + "\t-----\n");
+		state = Components_States.Inactive;
+		depInfor = "";
+		vId = "";
 		runningTime = 0;
 	}
 	
@@ -147,7 +161,7 @@ public class Tomcat {
 //		logger.info(id + "\t+++++ " + id + " current: " + depInfor + "\t new coming: " + _dId + "\n");
 		if (_vId.contains("Running")) {
 			vId = _vId;
-			
+//			logger.info(id + "\t+++++ " + id + " current: " + depInfor + "\t new coming: " + _dId + "\n");
 			if (_dId.contains("Active")) {
 				if (depInfor == null) {
 					depInfor = _dId;
@@ -168,13 +182,22 @@ public class Tomcat {
 	public boolean canStopTomcat(@Data(name = "sqlInfo") String _dId) {
 		String[] split = _dId.split("-");
 		logger.info("\tCheck STOP " + id + ": " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
-		if (this.depInfor.contains(split[0])) {
-			if (_dId.contains("InActive") || _dId.contains("Failure")) {
-				depInfor = _dId;
+		if (this.depInfor != null) {
+			if (this.depInfor.contains("Failure")) {
 				state = Components_States.Inactive;
-				logger.info(id + " should STOP");
+				logger.info(id + " should STOP 2: " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
 				return true;
+			} else			
+			if (this.depInfor.contains(split[0])) {
+				if (_dId.contains("InActive") || _dId.contains("Failure")) {
+					depInfor = _dId;
+					state = Components_States.Inactive;
+					logger.info(id + " should STOP 1: " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
+					return true;
+				}
 			}
+			
+			
 		}
 		return false;
 	}

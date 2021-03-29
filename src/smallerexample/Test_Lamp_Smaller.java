@@ -1,4 +1,4 @@
-package components;
+package smallerexample;
 
 import org.javabip.api.BIPActor;
 import org.javabip.api.BIPEngine;
@@ -10,11 +10,11 @@ import org.slf4j.LoggerFactory;
 import akka.actor.ActorSystem;
 
 
-public class Test_Lamp {
+public class Test_Lamp_Smaller {
 
 	private ActorSystem system;
     private EngineFactory engineFactory;
-    static final Logger logger = LoggerFactory.getLogger(Test_Lamp.class);
+    static final Logger logger = LoggerFactory.getLogger(Test_Lamp_Smaller.class);
     
     private void initialize() {
         system = ActorSystem.create("MySystem");
@@ -36,8 +36,8 @@ public class Test_Lamp {
     	MySQL mysql2 = new MySQL("mysql2");
     	Tomcat tomcat1 = new Tomcat("tomcat1");
     	Tomcat tomcat2 = new Tomcat("tomcat2");
-    	Apache apache1 = new Apache("apache1");
-    	Apache apache2 = new Apache("apache2");
+//    	Apache apache1 = new Apache("apache1");
+//    	Apache apache2 = new Apache("apache2");
     	
     	final BIPActor vm1_executor = engine.register(vm1, "vm1", true);
 		final BIPActor vm2_executor = engine.register(vm2, "vm2", true);
@@ -45,8 +45,8 @@ public class Test_Lamp {
 		final BIPActor mysql2_executor = engine.register(mysql2, "mysql2", true);
 		final BIPActor tomcat1_executor = engine.register(tomcat1, "tomcat1", true);
 		final BIPActor tomcat2_executor = engine.register(tomcat2, "tomcat2", true);
-		final BIPActor apache1_executor = engine.register(apache1, "apache1", true);
-		final BIPActor apache2_executor = engine.register(apache2, "apache2", true);
+//		final BIPActor apache1_executor = engine.register(apache1, "apache1", true);
+//		final BIPActor apache2_executor = engine.register(apache2, "apache2", true);
 		
 		engine.specifyGlue(bipGlue);
 		engine.start();
@@ -94,7 +94,7 @@ public class Test_Lamp {
     
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Test_Lamp testLamp = new Test_Lamp();
+		Test_Lamp_Smaller testLamp = new Test_Lamp_Smaller();
 		testLamp.initialize();
 		testLamp.runningTrackerPeer();
 		testLamp.cleanup();		

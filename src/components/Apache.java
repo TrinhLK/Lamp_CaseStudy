@@ -25,7 +25,7 @@ public class Apache {
 
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(Tomcat.class);
+	static final Logger logger = LoggerFactory.getLogger(Apache.class);
 	String vId;
 	String depInfor;
 	VM_States vStates;
@@ -98,9 +98,9 @@ public class Apache {
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
-		@Transition(name = "fail", source = "Deployed", target = "Error", guard = ""),
-		@Transition(name = "fail", source = "Inactive", target = "Error", guard = "")
+		@Transition(name = "fail", source = "Active", target = "Error", guard = "canFail"),
+		@Transition(name = "fail", source = "Deployed", target = "Error", guard = "canFail"),
+		@Transition(name = "fail", source = "Inactive", target = "Error", guard = "canFail")
 	})
 	public void fail() {
 		logger.info(id + " {" + state + "}: FAILED" + "\t-----\n");
@@ -121,6 +121,16 @@ public class Apache {
 			return true;
 		}
 		
+		return false;
+	}
+	
+	@Guard(name = "canFail")
+	public boolean canFail() {
+//		if (_vId.contains("Running")) {
+//			vId = _vId;
+//			return true;
+//		}
+//		
 		return false;
 	}
 	
