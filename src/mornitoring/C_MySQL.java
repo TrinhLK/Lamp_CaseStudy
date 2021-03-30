@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "stop", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.enforceable)
 })
-@ComponentType(initial = "Undeployed", name = "elements.C_MySQL")
+@ComponentType(initial = "Undeployed", name = "monitor.C_MySQL")
 public class C_MySQL {
 
 	String id;

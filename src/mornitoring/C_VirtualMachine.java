@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "delete", type = PortType.enforceable) 
 })
-@ComponentType(initial = "off", name = "mornitoring.C_VirtualMachine")
+@ComponentType(initial = "off", name = "monitor.C_VirtualMachine")
 public class C_VirtualMachine {
 
 	String vId;

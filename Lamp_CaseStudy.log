@@ -1,33 +1,218 @@
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_SystemsMonitor, hashCode = 841722896) and bipSpec mornitoring.C_SystemsMonitor@323644fe has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_SystemsMonitor, hashCode = 2046831291) and bipSpec mornitoring.C_SystemsMonitor@4ea991b5 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_SystemsMonitor@323644fe
+Component : mornitoring.C_SystemsMonitor@4ea991b5
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = mornitoring.C_VirtualMachine, hashCode = 518226923) and bipSpec mornitoring.C_VirtualMachine@15d4c9a7 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1603947654) and bipSpec mornitoring.C_VirtualMachine@41b2754d has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_VirtualMachine@15d4c9a7
+Component : mornitoring.C_VirtualMachine@41b2754d
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = mornitoring.C_VirtualMachine, hashCode = 1756951942) and bipSpec mornitoring.C_VirtualMachine@708eea60 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1524140166) and bipSpec mornitoring.C_VirtualMachine@5f18fa59 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_VirtualMachine@708eea60
+Component : mornitoring.C_VirtualMachine@5f18fa59
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = elements.C_MySQL, hashCode = 1401984627) and bipSpec mornitoring.C_MySQL@7116b01e has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1931611417) and bipSpec mornitoring.C_MySQL@223feab6 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_MySQL@7116b01e
+Component : mornitoring.C_MySQL@223feab6
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = elements.C_MySQL, hashCode = 937043596) and bipSpec mornitoring.C_MySQL@284273ef has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1354415616) and bipSpec mornitoring.C_MySQL@3dab6a16 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_MySQL@284273ef
+Component : mornitoring.C_MySQL@3dab6a16
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = steps.Tomcat, hashCode = 1645364096) and bipSpec mornitoring.C_Tomcat@2c4a94d5 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1778394518) and bipSpec mornitoring.C_Tomcat@2610d3ec has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_Tomcat@2c4a94d5
+Component : mornitoring.C_Tomcat@2610d3ec
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = steps.Tomcat, hashCode = 475786679) and bipSpec mornitoring.C_Tomcat@78ac07ac has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 157947743) and bipSpec mornitoring.C_Tomcat@5acd59f has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_Tomcat@78ac07ac
+Component : mornitoring.C_Tomcat@5acd59f
 ******************************************************************************
 Engine thread is started.
 Glue constraints added to existing total BDD.
+Invocation: start
+Invocation: start
+vm2: is on	-
+
+vm1: is on	-
+
+Invocation: active
+Invocation: active
+mysql2 check can Deploy: true
+Invocation: deploy
+Invocation: VMready
+Invocation: running
+tomcat1: is deployed on {vm2-Running}	-----
+
+Monitor: {vm2} is {Running}.
+
+mysql1 check can Deploy: true
+mysql2 check can Deploy: true
+Invocation: deploy
+tomcat2: is deployed on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+mysql1 check can Deploy: true
+mysql2 check can Deploy: true
+Invocation: deploy
+Invocation: VMready
+mysql2: is deployed on {vm2-Running}	-----
+
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+mysql1 check can Deploy: true
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {Running}.
+
+mysql1 check can Deploy: true
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+mysql1 check can Deploy: true
+Invocation: deploy
+mysql1: is deployed on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: start
+tomcat2: is running on {vm2-Running}, connected to {mysql2-Active}	-----
+
+Invocation: running
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: start
+tomcat1: is running on {vm2-Running}, connected to {mysql2-Active}	-----
+
+Invocation: running
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {Running}.
+
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: fail
+vm1: failed [ERROR]	-
+
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+tomcat2 should STOP
+tomcat1 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+Invocation: delete
+Invocation: undeploy
+vm2: is off	-
+
+mysql1: is undeployed	-----
+
+Monitor: {vm2} is {Running}.
+
+mysql1 check can Deploy: true
 Invocation: start
 Invocation: start
 vm1: is on	-
@@ -37,104 +222,31 @@ vm2: is on	-
 Invocation: active
 Invocation: active
 mysql1 check can Deploy: true
-mysql2 check can Deploy: true
 Invocation: deploy
 Invocation: VMready
+Invocation: running
 mysql1: is deployed on {vm2-Running}	-----
 
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-mysql2 check can Deploy: true
-Invocation: deploy
-Invocation: VMready
-tomcat2: is deployed on {vm2-Running}	-----
-
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-mysql2 check can Deploy: true
-Invocation: deploy
-Invocation: running
-Invocation: VMready
-mysql2: is deployed on {vm2-Running}	-----
-
 Monitor: {vm2} is {Running}.
 
 Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
 Invocation: running
 Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: start
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
 mysql2: is running on {vm2-Running}	-----
 
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-Invocation: running
 Invocation: VMready
-mysql1: is running on {vm2-Running}	-----
-
 Monitor: {vm2} is {Running}.
 
-Invocation: deploy
-Invocation: VMready
-tomcat1: is deployed on {vm2-Running}	-----
-
 Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-Invocation: running
-tomcat2: is running on {vm2-Running}, connected to {mysql2-Active}	-----
-
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat2 should STOP
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql2: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-Invocation: running
-tomcat1: is running on {vm2-Running}, connected to {mysql1-Active}	-----
-
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql1: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql2: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
 Invocation: fail
 mysql1 {Active}: spontaneous FAILED	-----
 
@@ -148,121 +260,55 @@ Invocation: VMready
 Monitor: {vm2} is {Running}.
 
 Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql2: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: delete
-vm1: is off	-
-
-Invocation: undeploy
-mysql2: is undeployed	-----
-
-Monitor: {vm1} is {Running}.
-
-mysql2 check can Deploy: true
-Invocation: start
-vm1: is on	-
-
-mysql2 check can Deploy: true
-Invocation: active
-mysql2 check can Deploy: true
-Invocation: fail
 mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-mysql2 check can Deploy: true
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql1: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-mysql2 check can Deploy: true
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-mysql2 check can Deploy: true
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: deploy
-Invocation: running
-Invocation: VMready
-mysql2: is deployed on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql1: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-Invocation: running
-Invocation: VMready
-mysql2: is running on {vm2-Running}	-----
-
-Monitor: {vm2} is {Running}.
 
 Invocation: fail
 mysql2 {Active}: spontaneous FAILED	-----
 
+tomcat1 should STOP
+tomcat2 should STOP
 Invocation: start
-Invocation: running
-Invocation: VMready
 mysql2: is running on {vm2-Running}	-----
 
+Invocation: running
+Invocation: VMready
 Monitor: {vm2} is {Running}.
 
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
 Invocation: fail
 mysql1 {Active}: spontaneous FAILED	-----
 
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat2 should STOP
-tomcat1 should STOP
 Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
 Invocation: running
 Invocation: VMready
 Monitor: {vm2} is {Running}.
 
-mysql1: is running on {vm2-Running}	-----
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: start
-Invocation: running
 Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
 mysql2: is running on {vm2-Running}	-----
 
+Invocation: running
+Invocation: VMready
 Monitor: {vm2} is {Running}.
 
 Invocation: VMready
@@ -273,29 +319,22 @@ Invocation: fail
 mysql2 {Active}: spontaneous FAILED	-----
 
 Invocation: start
-Invocation: running
-Invocation: VMready
 mysql2: is running on {vm2-Running}	-----
 
+Invocation: VMready
 Monitor: {vm2} is {Running}.
 
+Invocation: running
 Invocation: fail
 mysql1 {Active}: spontaneous FAILED	-----
 
 tomcat1 should STOP
 tomcat2 should STOP
-Invocation: delete
-vm2: is off	-
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
 
-Invocation: undeploy
-Monitor: {vm2} is {Running}.
-
-tomcat2: is undeployed	-----
-
-Invocation: start
-vm2: is on	-
-
-Invocation: active
+tomcat1 should STOP
+tomcat2 should STOP
 Invocation: start
 mysql1: is running on {vm2-Running}	-----
 
@@ -303,13 +342,171 @@ Invocation: running
 Invocation: VMready
 Monitor: {vm2} is {Running}.
 
-Invocation: deploy
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
 Invocation: running
 Invocation: VMready
 Monitor: {vm2} is {Running}.
 
-tomcat2: is deployed on {vm2-Running}	-----
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
 
-Invocation: configure
-tomcat2: is configuring	-----
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat2 should STOP
+tomcat1 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+Invocation: start
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {Running}.
+
+Invocation: fail
+mysql2 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql2: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+tomcat1 should STOP
+tomcat2 should STOP
+Invocation: start
+mysql1: is running on {vm2-Running}	-----
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: VMready
+Monitor: {vm2} is {Running}.
+
+Invocation: running
+Invocation: fail
+mysql1 {Active}: spontaneous FAILED	-----
 

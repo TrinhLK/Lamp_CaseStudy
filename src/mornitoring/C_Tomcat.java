@@ -25,7 +25,7 @@ import components.Components_States;
 	@Port(name = "stop", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.enforceable)
 })
-@ComponentType(initial = "Undeployed", name = "steps.Tomcat")
+@ComponentType(initial = "Undeployed", name = "monitor.Tomcat")
 public class C_Tomcat implements BIPActorAware{
 
 	String id;
