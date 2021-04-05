@@ -15,18 +15,18 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "delete", type = PortType.enforceable) 
 })
 @ComponentType(initial = "off", name = "elements.VirtualMachine")
-public class VirtualMachine {
+public class C_VirtualMachine {
 
 	String vId;
 	VM_States vState;
-	static final Logger logger = LoggerFactory.getLogger(VirtualMachine.class);
+	static final Logger logger = LoggerFactory.getLogger(C_VirtualMachine.class);
 	int runningTime;
 	
-	public VirtualMachine() {
+	public C_VirtualMachine() {
 		
 	}
 	
-	public VirtualMachine(String _id) {
+	public C_VirtualMachine(String _id) {
 		vId = _id;
 		vState = VM_States.OFF;
 		runningTime = 0;

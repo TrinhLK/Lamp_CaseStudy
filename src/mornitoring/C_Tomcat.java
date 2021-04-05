@@ -122,7 +122,7 @@ public class C_Tomcat implements BIPActorAware{
 	}
 	
 	@Guard(name = "canStart")
-	public boolean canStart(@Data(name = "sqlInfo") String _dId, @Data(name = "vmInfo") String _vId) {
+	public boolean canStart(@Data(name = "sqlInfo") String _dId, @Data(name = "vId") String _vId) {
 //		logger.info(id + "\t+++++ " + id + " current: " + depInfor + "\t new coming: " + _dId + "\n");
 		if (_vId.contains("Running")) {
 			vId = _vId;
@@ -152,7 +152,7 @@ public class C_Tomcat implements BIPActorAware{
 	}
 	
 	@Guard(name = "canDeploy")
-	public boolean canDeploy(@Data(name = "vmInfo") String _vId) {
+	public boolean canDeploy(@Data(name = "vId") String _vId) {
 		if (_vId.contains("Running")) {
 //			logger.info(id + " check can Start: " + true);
 			vId = _vId;
@@ -162,7 +162,7 @@ public class C_Tomcat implements BIPActorAware{
 	}
 	
 	@Guard(name = "followingShutdown")
-	public boolean followingShutdown(@Data(name = "vmInfo") String _vId) {
+	public boolean followingShutdown(@Data(name = "vId") String _vId) {
 		String[] infor = _vId.split("-");
 		if (this.vId.contains(infor[0])) {
 			return true;

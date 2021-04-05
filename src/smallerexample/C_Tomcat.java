@@ -15,28 +15,28 @@ import org.slf4j.LoggerFactory;
 @Ports({
 	@Port(name = "deploy", type = PortType.enforceable),
 	@Port(name = "undeploy", type = PortType.enforceable),
-	@Port(name = "configure", type = PortType.enforceable),
+//	@Port(name = "configure", type = PortType.enforceable),
 	@Port(name = "start", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "stop", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.enforceable)
 })
 @ComponentType(initial = "Undeployed", name = "elements.Tomcat")
-public class Tomcat {
+public class C_Tomcat {
 
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(Tomcat.class);
+	static final Logger logger = LoggerFactory.getLogger(C_Tomcat.class);
 	String vId;
 	String depInfor;
 	VM_States vStates;
 	int runningTime;
 	
-	public Tomcat() {
+	public C_Tomcat() {
 		state = Components_States.Undeployed;
 	}
 	
-	public Tomcat(String _id) {
+	public C_Tomcat(String _id) {
 		id = _id;
 		state = Components_States.Undeployed;
 	}
@@ -54,7 +54,7 @@ public class Tomcat {
 	
 	@Transitions({
 		@Transition(name = "undeploy", source = "Deployed", target = "Undeployed", guard = ""),
-		@Transition(name = "undeploy", source = "Active", target = "Undeployed", guard = "")
+//		@Transition(name = "undeploy", source = "Active", target = "Undeployed", guard = "")
 	})
 	public void undeploy() {
 		logger.info(id + ": is undeployed" + "\t-----\n");
@@ -87,23 +87,23 @@ public class Tomcat {
 //		runningTime = 0;
 //	}
 	
-	@Transitions({
-//		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
-		@Transition(name = "configure", source = "Deployed", target = "Inactive", guard = "")
-	})
-	public void configure() {
-		logger.info(id + ": is configuring" + "\t-----\n");
-		state = Components_States.Inactive;
-		depInfor = "";
-		runningTime = 0;
-	}
+//	@Transitions({
+////		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
+//		@Transition(name = "configure", source = "Deployed", target = "Inactive", guard = "")
+//	})
+//	public void configure() {
+//		logger.info(id + ": is configuring" + "\t-----\n");
+//		state = Components_States.Inactive;
+//		depInfor = "";
+//		runningTime = 0;
+//	}
 	
 	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "canStopTomcat"),
+		@Transition(name = "stop", source = "Active", target = "Stopped", guard = ""),
 //		@Transition(name = "stop", source = "Deployed", target = "Stopped", guard = ""),
 //		@Transition(name = "stop", source = "Inactive", target = "Stopped", guard = "")
 	})
-	public void stop1() {
+	public void stop() {
 		logger.info(id + " {" + state + "}: STOPPED" + "\t-----\n");
 		state = Components_States.Inactive;
 		depInfor = "";
@@ -151,16 +151,17 @@ public class Tomcat {
 		return id + "-" + state.toString();
 	}
 	
-//	@Data(name = "connectedTo", accessTypePort = AccessType.allowed, ports = { "running" })
-//	public String connectedTo() {
-//		return depInfor;
-//	}
-	
 	@Guard(name = "canStart")
 	public boolean canStart(@Data(name = "sqlInfo") String _dId, @Data(name = "vId") String _vId) {
 //		logger.info(id + "\t+++++ " + id + " current: " + depInfor + "\t new coming: " + _dId + "\n");
-		if (_vId.contains("Running")) {
+//		String[] _vInfo = _vId.split("-");
+		
+		if (vId == null || vId.equals("")) {
 			vId = _vId;
+		} else
+		if (_vId.contains("Running")) {
+			
+			
 //			logger.info(id + "\t+++++ " + id + " current: " + depInfor + "\t new coming: " + _dId + "\n");
 			if (_dId.contains("Active")) {
 				if (depInfor == null) {
@@ -181,15 +182,15 @@ public class Tomcat {
 	@Guard(name = "canStopTomcat")
 	public boolean canStopTomcat(@Data(name = "sqlInfo") String _dId) {
 		String[] split = _dId.split("-");
-		logger.info("\tCheck STOP " + id + ": " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
+//		logger.info("\tCheck STOP " + id + ": " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
 		if (this.depInfor != null) {
 			if (this.depInfor.contains("Failure")) {
 				state = Components_States.Inactive;
 				logger.info(id + " should STOP 2: " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
 				return true;
 			} else			
-			if (this.depInfor.contains(split[0])) {
-				if (_dId.contains("InActive") || _dId.contains("Failure")) {
+			if (this.depInfor.contains(split[0])) { //connecting mysql
+				if (_dId.contains("Inactive") || _dId.contains("Failure") || _dId.contains("Undeployed")) {
 					depInfor = _dId;
 					state = Components_States.Inactive;
 					logger.info(id + " should STOP 1: " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
@@ -200,5 +201,6 @@ public class Tomcat {
 			
 		}
 		return false;
+//		return true;
 	}
 }

@@ -12,7 +12,7 @@ public class SystemGlueBuilder extends GlueBuilder{
 		port(C_VirtualMachine.class, "running").requires(C_SystemsMonitor.class, "VMready");
 		port(C_SystemsMonitor.class, "VMready").requires(C_VirtualMachine.class, "running");
 		port(C_MySQL.class, "deploy").requires(C_SystemsMonitor.class, "VMready", C_VirtualMachine.class, "running");
-		port(C_MySQL.class, "start").requires(C_SystemsMonitor.class, "VMready", C_VirtualMachine.class, "running");
+		port(C_MySQL.class, "start").requires(C_SystemsMonitor.class, "VMready");
 		
 		// [(Monitor.ready)-(VirtualMachine.running)]`-(Tomcat.deploy)
 		port(C_Tomcat.class, "deploy").requires(C_SystemsMonitor.class, "VMready", C_VirtualMachine.class, "running");
@@ -33,7 +33,7 @@ public class SystemGlueBuilder extends GlueBuilder{
 		port(C_Tomcat.class, "undeploy").requires(C_SystemsMonitor.class, "VMdown", C_VirtualMachine.class, "delete");
 		
 		//Tomcat.stop
-		port(C_Tomcat.class, "stop").requires(C_MySQL.class, "fail");
+//		port(C_Tomcat.class, "stop").requires(C_MySQL.class, "fail");
 		/**
 		 * Accepts ports
 		 * */
@@ -65,18 +65,18 @@ public class SystemGlueBuilder extends GlueBuilder{
 		port(C_MySQL.class, "running").accepts(C_Tomcat.class, "start", C_SystemsMonitor.class, "VMready", C_VirtualMachine.class, "running");
 		
 		//Tomcat.stop
-		port(C_Tomcat.class, "stop").accepts(C_MySQL.class, "running", C_VirtualMachine.class, "running", C_SystemsMonitor.class, "VMready", C_MySQL.class, "fail");
-		port(C_MySQL.class, "fail").accepts(C_Tomcat.class, "stop");
-		port(C_MySQL.class, "undeploy").accepts(C_Tomcat.class, "stop");
-		port(C_MySQL.class, "running").accepts(C_Tomcat.class, "stop");
-		port(C_VirtualMachine.class, "running").accepts(C_Tomcat.class, "stop");
-		port(C_SystemsMonitor.class, "VMready").accepts(C_Tomcat.class, "stop");
+//		port(C_Tomcat.class, "stop").accepts(C_MySQL.class, "running", C_VirtualMachine.class, "running", C_SystemsMonitor.class, "VMready", C_MySQL.class, "fail");
+//		port(C_MySQL.class, "fail").accepts(C_Tomcat.class, "stop");
+//		port(C_MySQL.class, "undeploy").accepts(C_Tomcat.class, "stop");
+//		port(C_MySQL.class, "running").accepts(C_Tomcat.class, "stop");
+//		port(C_VirtualMachine.class, "running").accepts(C_Tomcat.class, "stop");
+//		port(C_SystemsMonitor.class, "VMready").accepts(C_Tomcat.class, "stop");
 		/**
 		 * Data transfer
 		 * */
 		data(C_VirtualMachine.class, "vId").to(C_SystemsMonitor.class, "vId");
-		data(C_SystemsMonitor.class, "vmInfo").to(C_MySQL.class, "vmInfo");
-		data(C_SystemsMonitor.class, "vmInfo").to(C_Tomcat.class, "vmInfo");
+		data(C_VirtualMachine.class, "vId").to(C_MySQL.class, "vId");
+		data(C_VirtualMachine.class, "vId").to(C_Tomcat.class, "vId");
 		
 		data(C_MySQL.class, "sqlInfo").to(C_Tomcat.class, "sqlInfo");
 	}

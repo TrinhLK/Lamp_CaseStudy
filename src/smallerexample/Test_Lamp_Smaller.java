@@ -30,12 +30,12 @@ public class Test_Lamp_Smaller {
     	
     	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
     	
-    	VirtualMachine vm1 = new VirtualMachine("vm1");
-    	VirtualMachine vm2 = new VirtualMachine("vm2");
-    	MySQL mysql1 = new MySQL("mysql1");
-    	MySQL mysql2 = new MySQL("mysql2");
-    	Tomcat tomcat1 = new Tomcat("tomcat1");
-    	Tomcat tomcat2 = new Tomcat("tomcat2");
+    	C_VirtualMachine vm1 = new C_VirtualMachine("vm1");
+    	C_VirtualMachine vm2 = new C_VirtualMachine("vm2");
+    	C_MySQL mysql1 = new C_MySQL("mysql1");
+    	C_MySQL mysql2 = new C_MySQL("mysql2");
+    	C_Tomcat tomcat1 = new C_Tomcat("tomcat1");
+    	C_Tomcat tomcat2 = new C_Tomcat("tomcat2");
 //    	Apache apache1 = new Apache("apache1");
 //    	Apache apache2 = new Apache("apache2");
     	
@@ -54,7 +54,7 @@ public class Test_Lamp_Smaller {
 		engine.execute();
 		
 		int loop = 0;
-		while (loop < 2) {
+//		while (loop < 2) {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -84,8 +84,8 @@ public class Test_Lamp_Smaller {
 				}
 			}
 
-			loop++;
-		}
+//			loop++;
+//		}
 		
 		engine.stop();
 		engineFactory.destroy(engine);

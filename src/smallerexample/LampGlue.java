@@ -12,26 +12,33 @@ public class LampGlue extends GlueBuilder{
 		 * VM and MySQL
 		 * --------------------------------------------------------------------------------------------
 		 * */
-		port(MySQL.class,"deploy").requires(VirtualMachine.class, "running");
-		port(MySQL.class,"start").requires(VirtualMachine.class, "running");
+		port(C_MySQL.class,"deploy").requires(C_VirtualMachine.class, "running");
+		port(C_MySQL.class,"start").requires(C_VirtualMachine.class, "running");
 //		port(MySQL.class,"running").requires(VirtualMachine.class, "running");
 		//VM shutdowned --> MySQL undeployed
-		port(MySQL.class,"undeploy").requires(VirtualMachine.class, "delete");
-		port(MySQL.class,"undeploy").requires(VirtualMachine.class, "pause");
+//		port(C_MySQL.class,"undeploy").requires(C_VirtualMachine.class, "delete");
+		port(C_VirtualMachine.class, "delete").requires(C_MySQL.class,"undeploy");
 		
+//		port(C_MySQL.class,"undeploy").requires(C_VirtualMachine.class, "pause");
+		port(C_VirtualMachine.class, "pause").requires(C_MySQL.class,"undeploy");
+		
+		//MySQL undeploy --> Tomcat Stop
+//		port(C_MySQL.class,"undeploy").requires(C_Tomcat.class, "stop");
 		/**
 		 * --------------------------------------------------------------------------------------------
 		 * Tomcat and MySQL
 		 * --------------------------------------------------------------------------------------------
 		 * */
 //		//MySQL running --> Tomcat can run
-		port(Tomcat.class,"deploy").requires(VirtualMachine.class, "running");
-		port(Tomcat.class,"start").requires(MySQL.class, "running");
-		port(Tomcat.class,"stop").requires(MySQL.class, "running");
+		port(C_Tomcat.class,"deploy").requires(C_VirtualMachine.class, "running");
+		port(C_Tomcat.class,"start").requires(C_MySQL.class, "running");
+		port(C_Tomcat.class,"stop").requires(C_MySQL.class, "running");
 		//VM shutdowned --> MySQL undeployed
-		port(Tomcat.class,"undeploy").requires(VirtualMachine.class, "delete");
-		port(Tomcat.class,"undeploy").requires(VirtualMachine.class, "pause");
+//		port(C_Tomcat.class,"undeploy").requires(C_VirtualMachine.class, "delete");
+		port(C_VirtualMachine.class, "delete").requires(C_Tomcat.class,"undeploy");
 		
+//		port(C_Tomcat.class,"undeploy").requires(C_VirtualMachine.class, "pause");
+		port(C_VirtualMachine.class, "pause").requires(C_Tomcat.class,"undeploy");
 		/**
 		 * --------------------------------------------------------------------------------------------
 		 * Apache and Tomcat
@@ -50,16 +57,20 @@ public class LampGlue extends GlueBuilder{
 		 * --------------------------------------------------------------------------------------------
 		 * */
 		//port(VirtualMachine.class,"active").accepts(MySQL.class, "deploy", "start", Tomcat.class, "deploy", "start", Apache.class, "deploy", "start");
-		port(VirtualMachine.class,"running").accepts(MySQL.class, "deploy", "start", "running", Tomcat.class, "deploy", "start", "running", "stop");
+		port(C_VirtualMachine.class,"running").accepts(C_MySQL.class, "deploy", "start", C_Tomcat.class, "deploy", "start");
 		
-		port(MySQL.class, "deploy").accepts(VirtualMachine.class, "running");
-		port(MySQL.class, "start").accepts(VirtualMachine.class,  "running", Tomcat.class, "start");
-		port(MySQL.class, "running").accepts(VirtualMachine.class, "running", Tomcat.class, "start", "stop");
+		port(C_MySQL.class, "deploy").accepts(C_VirtualMachine.class, "running");
+		port(C_MySQL.class, "start").accepts(C_VirtualMachine.class,  "running", C_Tomcat.class, "start");
+		port(C_MySQL.class, "running").accepts(C_VirtualMachine.class, "running", C_Tomcat.class, "start");
 		
-		port(Tomcat.class, "deploy").accepts(VirtualMachine.class, "running");
-		port(Tomcat.class, "start").accepts(VirtualMachine.class, "running", MySQL.class, "running", "start");
-//		port(Tomcat.class, "running").accepts(VirtualMachine.class, "running", MySQL.class, "running");
-		port(Tomcat.class, "stop").accepts(VirtualMachine.class, "running", MySQL.class, "running", "start");
+		port(C_Tomcat.class, "deploy").accepts(C_VirtualMachine.class, "running");
+		port(C_Tomcat.class, "start").accepts(C_VirtualMachine.class, "running", C_MySQL.class, "running", "start");
+		port(C_Tomcat.class, "stop").accepts(C_VirtualMachine.class, "running", C_MySQL.class, "running", "start");
+		
+//		port(C_MySQL.class,"undeploy").requires(C_Tomcat.class, "stop");
+//		port(C_MySQL.class,"running").requires(C_Tomcat.class, "stop");
+//		port(C_Tomcat.class, "stop").accepts(C_MySQL.class, "undeploy", "running");
+		
 //		
 //		port(Apache.class, "deploy").accepts(VirtualMachine.class, "running");
 //		port(Apache.class, "start").accepts(VirtualMachine.class, "running", Tomcat.class, "running", "start", MySQL.class, "running", "start");
@@ -71,22 +82,22 @@ public class LampGlue extends GlueBuilder{
 //		port(Tomcat.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause", MySQL.class,"undeploy", Apache.class,"undeploy");
 //		port(MySQL.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause", Tomcat.class,"undeploy", Apache.class,"undeploy");
 		
-		port(VirtualMachine.class, "delete").accepts(MySQL.class, "undeploy", Tomcat.class, "undeploy");
-		port(VirtualMachine.class, "pause").accepts(MySQL.class, "undeploy", Tomcat.class, "undeploy");
+		port(C_VirtualMachine.class, "delete").accepts(C_MySQL.class, "undeploy", C_Tomcat.class, "undeploy");
+		port(C_VirtualMachine.class, "pause").accepts(C_MySQL.class, "undeploy", C_Tomcat.class, "undeploy");
 //		port(Apache.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause", Tomcat.class,"undeploy", MySQL.class,"undeploy");
 //		port(Tomcat.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause", MySQL.class,"undeploy", Apache.class,"undeploy");
-		port(MySQL.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause");
-		port(Tomcat.class,"undeploy").accepts(VirtualMachine.class, "delete", "pause");
+		port(C_MySQL.class,"undeploy").accepts(C_VirtualMachine.class, "delete", "pause");
+		port(C_Tomcat.class,"undeploy").accepts(C_VirtualMachine.class, "delete", "pause");
 		/**
 		 * --------------------------------------------------------------------------------------------
 		 * Data transfer
 		 * --------------------------------------------------------------------------------------------
 		 * */
-		data(VirtualMachine.class, "vId").to(MySQL.class, "vId");
-		data(VirtualMachine.class, "vId").to(Tomcat.class, "vId");
+		data(C_VirtualMachine.class, "vId").to(C_MySQL.class, "vId");
+		data(C_VirtualMachine.class, "vId").to(C_Tomcat.class, "vId");
 //		data(VirtualMachine.class, "vId").to(Apache.class, "vId");
 		
-		data(MySQL.class, "sqlInfo").to(Tomcat.class, "sqlInfo");
+		data(C_MySQL.class, "sqlInfo").to(C_Tomcat.class, "sqlInfo");
 //		data(Tomcat.class, "tInfo").to(Apache.class, "tInfo");
 	}
 

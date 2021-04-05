@@ -1,30 +1,30 @@
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_SystemsMonitor, hashCode = 2046831291) and bipSpec mornitoring.C_SystemsMonitor@4ea991b5 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_SystemsMonitor, hashCode = 1990841566) and bipSpec monitoring1.C_SystemsMonitor@c751a00 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_SystemsMonitor@4ea991b5
+Component : monitoring1.C_SystemsMonitor@c751a00
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1603947654) and bipSpec mornitoring.C_VirtualMachine@41b2754d has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 166036145) and bipSpec monitoring1.C_VirtualMachine@5a11b813 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_VirtualMachine@41b2754d
+Component : monitoring1.C_VirtualMachine@5a11b813
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1524140166) and bipSpec mornitoring.C_VirtualMachine@5f18fa59 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 796612206) and bipSpec monitoring1.C_VirtualMachine@78ec6e70 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_VirtualMachine@5f18fa59
+Component : monitoring1.C_VirtualMachine@78ec6e70
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1931611417) and bipSpec mornitoring.C_MySQL@223feab6 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1611728785) and bipSpec monitoring1.C_MySQL@5e1808ce has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_MySQL@223feab6
+Component : monitoring1.C_MySQL@5e1808ce
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1354415616) and bipSpec mornitoring.C_MySQL@3dab6a16 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 2086844611) and bipSpec monitoring1.C_MySQL@51757e0e has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_MySQL@3dab6a16
+Component : monitoring1.C_MySQL@51757e0e
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1778394518) and bipSpec mornitoring.C_Tomcat@2610d3ec has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1966254645) and bipSpec monitoring1.C_Tomcat@67fcb1c5 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_Tomcat@2610d3ec
+Component : monitoring1.C_Tomcat@67fcb1c5
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 157947743) and bipSpec mornitoring.C_Tomcat@5acd59f has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 862234471) and bipSpec monitoring1.C_Tomcat@78b4abd6 has been created.
 ********************************* Register *************************************
-Component : mornitoring.C_Tomcat@5acd59f
+Component : monitoring1.C_Tomcat@78b4abd6
 ******************************************************************************
 Engine thread is started.
 Glue constraints added to existing total BDD.
@@ -36,477 +36,7950 @@ vm1: is on	-
 
 Invocation: active
 Invocation: active
-mysql2 check can Deploy: true
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: deploy
+mysql2: is deployed on {vm1}	-----
+
+Invocation: running
 Invocation: VMready
 Invocation: running
-tomcat1: is deployed on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
-Monitor: {vm2} is {Running}.
-
-mysql1 check can Deploy: true
-mysql2 check can Deploy: true
 Invocation: deploy
-tomcat2: is deployed on {vm2-Running}	-----
+mysql1: is deployed on {vm1}	-----
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
 Invocation: running
-mysql1 check can Deploy: true
-mysql2 check can Deploy: true
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
 Invocation: deploy
-Invocation: VMready
-mysql2: is deployed on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-mysql1 check can Deploy: true
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
+tomcat1: is deployed on {vm1}	-----
 
 Invocation: VMready
-Invocation: running
-Monitor: {vm2} is {Running}.
-
-mysql1 check can Deploy: true
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-mysql1 check can Deploy: true
 Invocation: deploy
-mysql1: is deployed on {vm2-Running}	-----
+tomcat2: is deployed on {vm1}	-----
+
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: start
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Monitor: {vm2} is {ready}.
+
+Invocation: start
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Invocation: start
+Invocation: running
+mysql2: is running on {vm1}	-----
+
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
 Invocation: running
-Invocation: start
-tomcat2: is running on {vm2-Running}, connected to {mysql2-Active}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: start
-tomcat1: is running on {vm2-Running}, connected to {mysql2-Active}	-----
-
-Invocation: running
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
+mysql1: is running on {vm1}	-----
 
 Invocation: VMready
 Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
 Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
 Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-vm1: failed [ERROR]	-
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
 Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
+Monitor: {vm2} is {ready}.
 
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
 Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: delete
 Invocation: undeploy
-vm2: is off	-
+vm1: is off	-
 
 mysql1: is undeployed	-----
 
-Monitor: {vm2} is {Running}.
+Monitor: {vm1} is {down}.
 
-mysql1 check can Deploy: true
-Invocation: start
 Invocation: start
 vm1: is on	-
 
-vm2: is on	-
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: active
-Invocation: active
-mysql1 check can Deploy: true
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
 Invocation: deploy
+Invocation: running
+mysql1: is deployed on {vm1}	-----
+
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: start
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Monitor: {vm2} is {ready}.
+
 Invocation: VMready
 Invocation: running
-mysql1: is deployed on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
-Monitor: {vm2} is {Running}.
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: fail
+vm1: failed [ERROR]	-
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: start
-mysql1: is running on {vm2-Running}	-----
+vm1: is on	-
+
+Invocation: active
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
 
-Invocation: start
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql2: is running on {vm2-Running}	-----
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+mysql1_executor is informing to fail
+mysql1 was informed of a spontaneous transition fail
+Invocation: VMready
 Invocation: running
 Invocation: fail
+Monitor: {vm2} is {ready}.
+
 mysql1 {Active}: spontaneous FAILED	-----
 
-tomcat2 should STOP
-tomcat1 should STOP
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
+mysql1: is running on {vm1}	-----
 
 Invocation: VMready
 Invocation: running
-Monitor: {vm2} is {Running}.
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-tomcat2 should STOP
-tomcat1 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
-
-Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
-
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
 Invocation: running
-Monitor: {vm2} is {Running}.
+Monitor: {vm2} is {ready}.
 
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql2: is running on {vm2-Running}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: VMready
-Monitor: {vm2} is {Running}.
-
-tomcat1 should STOP
-tomcat2 should STOP
-Invocation: start
-mysql1: is running on {vm2-Running}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: VMready
-Monitor: {vm2} is {Running}.
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-Invocation: fail
-mysql1 {Active}: spontaneous FAILED	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running

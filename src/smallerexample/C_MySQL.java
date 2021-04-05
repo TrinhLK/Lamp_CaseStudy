@@ -1,4 +1,4 @@
-package mornitoring;
+package smallerexample;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -15,13 +15,13 @@ import org.slf4j.LoggerFactory;
 @Ports({
 	@Port(name = "deploy", type = PortType.enforceable),
 	@Port(name = "undeploy", type = PortType.enforceable),
-	@Port(name = "configure", type = PortType.enforceable),
+//	@Port(name = "configure", type = PortType.enforceable),
 	@Port(name = "start", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "stop", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.spontaneous)
 })
-@ComponentType(initial = "Undeployed", name = "monitor.C_MySQL")
+@ComponentType(initial = "Undeployed", name = "elements.MySQL")
 public class C_MySQL {
 
 	String id;
@@ -54,7 +54,7 @@ public class C_MySQL {
 	
 	@Transitions({
 		@Transition(name = "undeploy", source = "Deployed", target = "Undeployed", guard = ""),
-		@Transition(name = "undeploy", source = "Active", target = "Undeployed", guard = "")
+//		@Transition(name = "undeploy", source = "Active", target = "Undeployed", guard = "")
 	})
 	public void undeploy() {
 		logger.info(id + ": is undeployed" + "\t-----\n");
@@ -68,7 +68,6 @@ public class C_MySQL {
 		@Transition(name = "start", source = "Deployed", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
-		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start() {
@@ -78,7 +77,7 @@ public class C_MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
+		@Transition(name = "fail", source = "Active", target = "Error", guard = "canFail"),
 	})
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
@@ -89,7 +88,7 @@ public class C_MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "!canStop"),
+		@Transition(name = "stop", source = "Active", target = "Inactive", guard = "canStop"),
 	})
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
@@ -98,16 +97,16 @@ public class C_MySQL {
 		runningTime = 0;
 	}
 	
-	@Transitions({
-		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
-		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
-	})
-	public void configure() {
-		logger.info(id + ": is configuring" + "\t-----\n");
-		state = Components_States.Inactive;
-		depInfor = "";
-		runningTime = 0;
-	}
+//	@Transitions({
+//		@Transition(name = "configure", source = "InActive", target = "Inactive", guard = ""),
+//		@Transition(name = "configure", source = "Deployed", target = "Inactive", guard = "")
+//	})
+//	public void configure() {
+//		logger.info(id + ": is configuring" + "\t-----\n");
+//		state = Components_States.Inactive;
+//		depInfor = "";
+//		runningTime = 0;
+//	}
 	
 	/**
 	 * DATA & GUARDS
@@ -129,7 +128,7 @@ public class C_MySQL {
 	
 	@Guard(name = "canStop")
 	public boolean canStop() {		
-		return true;
+		return false;
 	}
 	
 	@Guard(name = "canFail")
@@ -140,7 +139,6 @@ public class C_MySQL {
 	@Guard(name = "canDeploy")
 	public boolean canDeploy(@Data(name = "vId") String _vId) {
 		if (_vId.contains("Running")) {
-			logger.info(id + " check can Deploy: " + true);
 			vId = _vId;
 			return true;
 		}

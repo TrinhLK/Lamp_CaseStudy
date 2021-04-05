@@ -1,4 +1,4 @@
-package mornitoring;
+package monitoring1;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -69,7 +69,7 @@ public class C_MySQL {
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
-		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
+//		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start() {
 		logger.info(id + ": is running on {" + vId + "}\t-----\n");
@@ -98,33 +98,32 @@ public class C_MySQL {
 		runningTime = 0;
 	}
 	
-	@Transitions({
-		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
-		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
-	})
-	public void configure() {
-		logger.info(id + ": is configuring" + "\t-----\n");
-		state = Components_States.Inactive;
-		depInfor = "";
-		runningTime = 0;
-	}
+//	@Transitions({
+//		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
+//		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
+//	})
+//	public void configure() {
+//		logger.info(id + ": is configuring" + "\t-----\n");
+//		state = Components_States.Inactive;
+//		depInfor = "";
+//		runningTime = 0;
+//	}
 	
 	/**
 	 * DATA & GUARDS
 	 * */
 	@Data(name = "sqlInfo", accessTypePort = AccessType.any)
 	public String sqlId() {
-		return id + "-" + state.toString();
+		return id;
 	}
 	
 	@Guard(name = "canStart")
 	public boolean canStart(@Data(name = "vId") String _vId) {
-		if (_vId.contains("Running")) {
+		if (vId == null || vId.equals("")) {
 			vId = _vId;
-			return true;
 		}
 		
-		return false;
+		return (vId == _vId);
 	}
 	
 	@Guard(name = "canStop")
@@ -139,12 +138,11 @@ public class C_MySQL {
 	
 	@Guard(name = "canDeploy")
 	public boolean canDeploy(@Data(name = "vId") String _vId) {
-		if (_vId.contains("Running")) {
-			logger.info(id + " check can Deploy: " + true);
+		if (vId == null || vId.equals("")) {
 			vId = _vId;
-			return true;
+			
 		}
-		return false;
+		return (vId == _vId);
 	}
 	
 	@Guard(name = "followingShutdown")

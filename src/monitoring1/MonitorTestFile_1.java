@@ -1,4 +1,4 @@
-package mornitoring;
+package monitoring1;
 
 import org.javabip.api.BIPActor;
 import org.javabip.api.BIPEngine;
@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 
 import akka.actor.ActorSystem;
 
-public class MonitorTestFile {
+public class MonitorTestFile_1 {
 	private ActorSystem system;
     private EngineFactory engineFactory;
-    static final Logger logger = LoggerFactory.getLogger(MonitorTestFile.class);
+    static final Logger logger = LoggerFactory.getLogger(MonitorTestFile_1.class);
     
     private void initialize() {
         system = ActorSystem.create("MySystem");
@@ -56,7 +56,7 @@ public class MonitorTestFile {
 //		int loop = 0;
 //		while (loop < 2) {
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -71,18 +71,17 @@ public class MonitorTestFile {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-			}  
-				
-//			if (mysql2_executor.getState().equals("Active")) {
-//				try {
-//					logger.info("mysql2_executor is informing to fail");
-//					mysql2_executor.inform("fail");
-//					
-//					Thread.sleep (100);
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
-//			}
+			} else
+			if (mysql2_executor.getState().equals("Active")) {
+				try {
+					logger.info("mysql2_executor is informing to fail");
+					mysql2_executor.inform("fail");
+					
+					Thread.sleep (100);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 
 //			loop++;
 //		}
@@ -94,7 +93,7 @@ public class MonitorTestFile {
     
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
-    	MonitorTestFile testLamp = new MonitorTestFile();
+    	MonitorTestFile_1 testLamp = new MonitorTestFile_1();
 		testLamp.initialize();
 		testLamp.runningTrackerPeer();
 		testLamp.cleanup();		
