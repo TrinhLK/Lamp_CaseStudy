@@ -1,6 +1,4 @@
-package monitoring1;
-
-import java.util.HashSet;
+package monitoring041;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -9,11 +7,12 @@ import org.javabip.annotations.Port;
 import org.javabip.annotations.Ports;
 import org.javabip.annotations.Transition;
 import org.javabip.annotations.Transitions;
-import org.javabip.api.BIPActor;
 import org.javabip.api.PortType;
 import org.javabip.api.DataOut.AccessType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import components.Components_States;
 
 @Ports({
 	@Port(name = "deploy", type = PortType.enforceable),
@@ -22,29 +21,27 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "start", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "stop", type = PortType.enforceable),
+	@Port(name = "makeError", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.spontaneous)
 })
-@ComponentType(initial = "Undeployed", name = "monitor.C_MySQL")
-public class C_MySQL {
+@ComponentType(initial = "Undeployed", name = "monitor.Tomcat")
+public class C_Tomcat{
 
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(C_MySQL.class);
+	static final Logger logger = LoggerFactory.getLogger(C_Tomcat.class);
 	String vId;
 	String depInfor;
 	VM_States vStates;
 	int runningTime;
-	private HashSet<BIPActor> tomcats;
 	
-	public C_MySQL() {
+	public C_Tomcat() {
 		state = Components_States.Undeployed;
-		this.tomcats = new HashSet<BIPActor>();
 	}
 	
-	public C_MySQL(String _id) {
+	public C_Tomcat(String _id) {
 		id = _id;
 		state = Components_States.Undeployed;
-		this.tomcats = new HashSet<BIPActor>();
 	}
 	
 	/**
@@ -74,17 +71,19 @@ public class C_MySQL {
 		@Transition(name = "start", source = "Deployed", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
-		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
+		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canRecover"),
 //		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
-	public void start() {
-		logger.info(id + ": is running on {" + vId + "}\t-----\n");
+	public void start(@Data(name = "sqlInfo") String _dId) {
+		depInfor = _dId;
+		logger.info(id + ": is running on {" + vId + "}, connected to {" + depInfor + "}\t-----\n");
 		state = Components_States.Active;
 		runningTime++;
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
+		@Transition(name = "fail", source = "Active", target = "Failing", guard = ""),
+		@Transition(name = "fail", source = "Deployed", target = "Failing", guard = ""),
 	})
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
@@ -95,60 +94,72 @@ public class C_MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "!canStop"),
+		@Transition(name = "makeError", source = "Failing", target = "Error", guard = ""),
+	})
+	public void makeError() {
+		logger.info(id + " {" + state + "}: from Failing to Error" + "\t-----\n");
+	}
+	
+	@Transitions({
+		@Transition(name = "stop", source = "Active", target = "Stopped", guard = "canStop"),
 	})
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
 		state = Components_States.Inactive;
-		depInfor = "";
+//		depInfor = "";
 		runningTime = 0;
 	}
-	
-//	@Transitions({
-//		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
-//		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
-//	})
-//	public void configure() {
-//		logger.info(id + ": is configuring" + "\t-----\n");
-//		state = Components_States.Inactive;
-//		depInfor = "";
-//		runningTime = 0;
-//	}
 	
 	/**
 	 * DATA & GUARDS
 	 * */
-	@Data(name = "sqlInfo", accessTypePort = AccessType.any)
+	@Data(name = "tomcatInfo", accessTypePort = AccessType.any)
 	public String sqlId() {
 		return id;
 	}
 	
 	@Guard(name = "canStart")
-	public boolean canStart(@Data(name = "vId") String _vId) {
-		if (vId == null || vId.equals("")) {
-			vId = _vId;
+	public boolean canStart(@Data(name = "sqlInfo") String _dId) {
+//		logger.info(id + "\t---\t" + _dId);
+		if (depInfor == null || depInfor.equals("")) {
+			depInfor = _dId;
 		}
-		
-		return (vId == _vId);
+		return (depInfor.equals(_dId));
+	}
+	
+	@Guard(name = "canRecover")
+	public boolean canRecover(@Data(name = "sqlInfo") String _dId) {
+//		logger.info(id + "\t---\t" + _dId);
+		if (!depInfor.equals(_dId)) {
+			logger.info("\t check canRecover: " + depInfor + "\t" + _dId);
+			return true;
+		}
+		return false;
 	}
 	
 	@Guard(name = "canStop")
-	public boolean canStop() {		
-		return true;
+	public boolean canStop(@Data(name = "sqlInfo") String _dId) {
+		if (depInfor.equals(_dId)) {
+			logger.info("\t" + id + " can Stop: " + depInfor + " -- " + _dId);
+			return true;
+		}else {
+			logger.info("\t" + id + " cannot Stop: " + depInfor + " -- " + _dId);
+			return false;
+		}
+//		return (depInfor.equals(_dId));
 	}
 	
 	@Guard(name = "canFail")
 	public boolean canFail() {		
-		return (runningTime > 5);
+		return true;
 	}
 	
 	@Guard(name = "canDeploy")
 	public boolean canDeploy(@Data(name = "vId") String _vId) {
 		if (vId == null || vId.equals("")) {
 			vId = _vId;
-			
 		}
-		return (vId == _vId);
+		return (vId.equals(_vId));
 	}
 	
 	@Guard(name = "followingShutdown")
@@ -159,4 +170,26 @@ public class C_MySQL {
 		}
 		return false;
 	}
+	
+	@Guard(name = "canStopTomcat")
+	public boolean canStopTomcat(@Data(name = "sqlInfo") String _dId) {
+		if (depInfor.equals(_dId)) {
+			return true;
+		}
+		return false;
+//		String[] split = _dId.split("-");
+//		
+//		if (this.depInfor.contains(split[0])) {
+////			logger.info("\tCheck STOP " + id + ": " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
+//			if (_dId.contains("InActive") || _dId.contains("Failure")) {
+//				depInfor = _dId;
+//				state = Components_States.Inactive;
+//				logger.info(id + " should STOP");
+//				return true;
+//			}
+//		}
+//		return false;
+	}
+
 }
+

@@ -1,7 +1,7 @@
-package monitoring1;
+package monitoring2;
 
 import java.util.HashSet;
-
+import java.util.*;  
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
 import org.javabip.annotations.Guard;
@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "start", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "stop", type = PortType.enforceable),
+	@Port(name = "makeError", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.spontaneous)
 })
 @ComponentType(initial = "Undeployed", name = "monitor.C_MySQL")
@@ -34,6 +35,7 @@ public class C_MySQL {
 	String depInfor;
 	VM_States vStates;
 	int runningTime;
+	
 	private HashSet<BIPActor> tomcats;
 	
 	public C_MySQL() {
@@ -75,7 +77,7 @@ public class C_MySQL {
 		@Transition(name = "start", source = "Error", target = "Active", guard = "canStart"),
 		@Transition(name = "running", source = "Active", target = "Active", guard = "canStart"),
 		@Transition(name = "start", source = "Stopped", target = "Active", guard = "canStart"),
-//		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
+		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start() {
 		logger.info(id + ": is running on {" + vId + "}\t-----\n");
@@ -84,7 +86,7 @@ public class C_MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
+		@Transition(name = "fail", source = "Active", target = "Failing", guard = ""),
 	})
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
@@ -92,6 +94,25 @@ public class C_MySQL {
 		depInfor = "";
 		vId = "";
 		runningTime = 0;
+		System.out.println("\t ++ Check Tomcat size: " + tomcats.size());
+		
+		Iterator<BIPActor> itr = tomcats.iterator();
+		while (itr.hasNext()) {
+			if (itr.next() != null) {
+				logger.info("C_MySQL fail check: " + itr.next().getState() + "\n");
+				itr.next().inform("stop");
+			}else {
+				logger.info("Tomcat Actor is null.\n");
+			}
+			
+		}
+	}
+	
+	@Transitions({
+		@Transition(name = "makeError", source = "Failing", target = "Error", guard = ""),
+	})
+	public void makeError() {
+		logger.info(id + " {" + state + "}: from Failing to Error" + "\t-----\n");
 	}
 	
 	@Transitions({
@@ -104,16 +125,16 @@ public class C_MySQL {
 		runningTime = 0;
 	}
 	
-//	@Transitions({
-//		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
-//		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
-//	})
-//	public void configure() {
-//		logger.info(id + ": is configuring" + "\t-----\n");
-//		state = Components_States.Inactive;
-//		depInfor = "";
-//		runningTime = 0;
-//	}
+	@Transitions({
+		@Transition(name = "configure", source = "InActive", target = "InActive", guard = "canStart"),
+		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "canStart")
+	})
+	public void configure() {
+		logger.info(id + ": is configuring" + "\t-----\n");
+		state = Components_States.Inactive;
+		depInfor = "";
+		runningTime = 0;
+	}
 	
 	/**
 	 * DATA & GUARDS
@@ -128,8 +149,17 @@ public class C_MySQL {
 		if (vId == null || vId.equals("")) {
 			vId = _vId;
 		}
+//		System.out.println("Comming Tomcat Actor: " + _tomcatActor.getState());
+//		tomcats.add(_tomcatActor);
 		
 		return (vId == _vId);
+	}
+	
+	@Guard(name = "canConnectBIP")
+	public boolean canConnectBIP(@Data(name = "tomcatActor1") BIPActor _tomcatActor) {
+		
+		tomcats.add(_tomcatActor);
+		return true;
 	}
 	
 	@Guard(name = "canStop")

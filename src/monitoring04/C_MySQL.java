@@ -1,6 +1,4 @@
-package monitoring1;
-
-import java.util.HashSet;
+package monitoring04;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -9,7 +7,6 @@ import org.javabip.annotations.Port;
 import org.javabip.annotations.Ports;
 import org.javabip.annotations.Transition;
 import org.javabip.annotations.Transitions;
-import org.javabip.api.BIPActor;
 import org.javabip.api.PortType;
 import org.javabip.api.DataOut.AccessType;
 import org.slf4j.Logger;
@@ -22,6 +19,7 @@ import org.slf4j.LoggerFactory;
 	@Port(name = "start", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
 	@Port(name = "stop", type = PortType.enforceable),
+	@Port(name = "makeError", type = PortType.enforceable),
 	@Port(name = "fail", type = PortType.spontaneous)
 })
 @ComponentType(initial = "Undeployed", name = "monitor.C_MySQL")
@@ -31,20 +29,16 @@ public class C_MySQL {
 	Components_States state;
 	static final Logger logger = LoggerFactory.getLogger(C_MySQL.class);
 	String vId;
-	String depInfor;
-	VM_States vStates;
+//	String depInfor;
 	int runningTime;
-	private HashSet<BIPActor> tomcats;
-	
+		
 	public C_MySQL() {
 		state = Components_States.Undeployed;
-		this.tomcats = new HashSet<BIPActor>();
 	}
 	
 	public C_MySQL(String _id) {
 		id = _id;
 		state = Components_States.Undeployed;
-		this.tomcats = new HashSet<BIPActor>();
 	}
 	
 	/**
@@ -65,7 +59,7 @@ public class C_MySQL {
 	public void undeploy() {
 		logger.info(id + ": is undeployed" + "\t-----\n");
 		vId = "";
-		depInfor = "";
+//		depInfor = "";
 		state = Components_States.Undeployed;
 		runningTime = 0;
 	}
@@ -84,14 +78,24 @@ public class C_MySQL {
 	}
 	
 	@Transitions({
-		@Transition(name = "fail", source = "Active", target = "Error", guard = ""),
+		@Transition(name = "fail", source = "Active", target = "Failing", guard = ""),
+		@Transition(name = "fail", source = "Deployed", target = "Failing", guard = ""),
 	})
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
 		state = Components_States.Failure;
-		depInfor = "";
+//		depInfor = "";
 		vId = "";
+		
 		runningTime = 0;
+	}
+	
+	@Transitions({
+		@Transition(name = "makeError", source = "Failing", target = "Error", guard = ""),
+//		@Transition(name = "makeError", source = "Error", target = "Error", guard = ""),
+	})
+	public void makeError() {
+		logger.info(id + " {" + state + "}: from Failing to Error" + "\t-----\n");
 	}
 	
 	@Transitions({
@@ -100,20 +104,9 @@ public class C_MySQL {
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
 		state = Components_States.Inactive;
-		depInfor = "";
+//		depInfor = "";
 		runningTime = 0;
 	}
-	
-//	@Transitions({
-//		@Transition(name = "configure", source = "InActive", target = "InActive", guard = ""),
-//		@Transition(name = "configure", source = "Deployed", target = "InActive", guard = "")
-//	})
-//	public void configure() {
-//		logger.info(id + ": is configuring" + "\t-----\n");
-//		state = Components_States.Inactive;
-//		depInfor = "";
-//		runningTime = 0;
-//	}
 	
 	/**
 	 * DATA & GUARDS
@@ -129,8 +122,9 @@ public class C_MySQL {
 			vId = _vId;
 		}
 		
-		return (vId == _vId);
+		return (vId.equals(_vId));
 	}
+
 	
 	@Guard(name = "canStop")
 	public boolean canStop() {		
