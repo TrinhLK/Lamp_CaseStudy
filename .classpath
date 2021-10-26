@@ -16,6 +16,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Volumes/Setup/JavaProjects/Lamp_CaseStudy/libs/JavaBIP-Framework.jar"/>
+	<classpathentry kind="lib" path="libs/JavaBIP-Framework.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

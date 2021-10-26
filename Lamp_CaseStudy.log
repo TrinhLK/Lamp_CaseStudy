@@ -1,408 +1,483 @@
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1901295444) and bipSpec monitoring04.C_VirtualMachine@634dd562 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_SystemsMonitor, hashCode = 1779556907) and bipSpec monitoring2.C_SystemsMonitor@f023d2d has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_VirtualMachine@634dd562
+Component : monitoring2.C_SystemsMonitor@f023d2d
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1644907732) and bipSpec monitoring04.C_VirtualMachine@4f11cecc has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1922511163) and bipSpec monitoring2.C_VirtualMachine@1a0a004f has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_VirtualMachine@4f11cecc
+Component : monitoring2.C_VirtualMachine@1a0a004f
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 399767699) and bipSpec monitoring04.C_MySQL@1d0d8ed has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_VirtualMachine, hashCode = 1142442799) and bipSpec monitoring2.C_VirtualMachine@1e38c7c2 has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_MySQL@1d0d8ed
+Component : monitoring2.C_VirtualMachine@1e38c7c2
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 679427976) and bipSpec monitoring04.C_MySQL@708795e5 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.C_MySQL, hashCode = 1346412859) and bipSpec monitoring2.C_MySQL@4ea352dd has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_MySQL@708795e5
+Component : monitoring2.C_MySQL@4ea352dd
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1898630565) and bipSpec monitoring04.C_Tomcat@54e2f861 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1642392121) and bipSpec monitoring2.C_Tomcat@414b2f4f has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_Tomcat@54e2f861
+Component : monitoring2.C_Tomcat@414b2f4f
 ******************************************************************************
-Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1915125755) and bipSpec monitoring04.C_Tomcat@766908d6 has been created.
+Tunneling executor handler for executor BIPComponent=(type = monitor.Tomcat, hashCode = 1702090413) and bipSpec monitoring2.C_Tomcat@54b05472 has been created.
 ********************************* Register *************************************
-Component : monitoring04.C_Tomcat@766908d6
+Component : monitoring2.C_Tomcat@54b05472
 ******************************************************************************
+setup the tomcatActor: Undeployed
+setup the tomcatActor: Undeployed
+get Tomcat1 actor: Actor[akka://MySystem/user/myEngine/tomcat1#-685349789]
+get Tomcat2 actor: Actor[akka://MySystem/user/myEngine/tomcat2#119728133]
 Engine thread is started.
 Glue constraints added to existing total BDD.
 Invocation: start
-Invocation: start
 vm1: is on	-
 
+Invocation: start
 vm2: is on	-
 
 Invocation: active
 Invocation: active
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: deploy
+tomcat2: is deployed on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: deploy
+tomcat1: is deployed on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: deploy
+mysql1: is deployed on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: configure
+mysql1: is configuring	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: start
+mysql1: is running on {vm1}	-----
+
+Invocation: start
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: start
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: delete
+vm1: is off	-
+
+Invocation: undeploy
+mysql1: is undeployed	-----
+
+Monitor: {vm1} is {down}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: start
+vm1: is on	-
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: active
+Invocation: VMready
 Invocation: deploy
 Invocation: running
 mysql1: is deployed on {vm1}	-----
 
-Invocation: deploy
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: configure
 Invocation: running
+mysql1: is configuring	-----
+
+Invocation: VMready
+Invocation: running
+Invocation: configure
+mysql1: is configuring	-----
+
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: configure
+mysql1: is configuring	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: configure
+Invocation: running
+mysql1: is configuring	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: start
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Monitor: {vm1} is {down}.
+
+Invocation: undeploy
+tomcat2: is undeployed	-----
+
+Invocation: delete
+vm1: is off	-
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: start
+vm1: is on	-
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: active
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: deploy
 tomcat2: is deployed on {vm1}	-----
 
-Invocation: deploy
-mysql2: is deployed on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: start
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: deploy
-Invocation: running
-tomcat1: is deployed on {vm1}	-----
-
-Invocation: start
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-mysql1: is running on {vm1}	-----
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
 Invocation: fail
 vm1: failed [ERROR]	-
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: start
-vm1: is on	-
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: active
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: fail
-vm1: failed [ERROR]	-
 
 Invocation: start
 vm1: is on	-
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+mysql1: is running on {vm1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+Invocation: running
+mysql1: is running on {vm1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 mysql1: is running on {vm1}	-----
+
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: active
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
@@ -410,40 +485,33 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
@@ -453,2999 +521,246 @@ mysql1: is running on {vm1}	-----
 
 Invocation: running
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Monitor: {vm1} is {down}.
+
 Invocation: delete
-Invocation: undeploy
 vm1: is off	-
 
-mysql2: is undeployed	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: start
-vm1: is on	-
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: active
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: deploy
-Invocation: running
-mysql2: is deployed on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: start
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: delete
 Invocation: undeploy
-vm1: is off	-
-
 tomcat2: is undeployed	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
 Invocation: start
 vm1: is on	-
 
-Invocation: running
 Invocation: active
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: deploy
-Invocation: running
 tomcat2: is deployed on {vm1}	-----
 
 Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: delete
-Invocation: undeploy
-vm1: is off	-
-
-tomcat2: is undeployed	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: start
-vm1: is on	-
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: active
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: deploy
-Invocation: running
-tomcat2: is deployed on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -3454,11 +769,10 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -3467,19 +781,19 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
+Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -3490,47 +804,49 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
+Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-Invocation: running
+Invocation: VMready
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -3539,30 +855,34 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -3570,77 +890,82 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -3651,47 +976,53 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-mysql1: is running on {vm1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
@@ -3699,6 +1030,11 @@ Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -3706,69 +1042,76 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-Invocation: running
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-Invocation: running
-Invocation: running
-Invocation: running
 Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-mysql1: is running on {vm1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -3777,7 +1120,6 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
@@ -3787,62 +1129,72 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
@@ -3852,50 +1204,64 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
+mysql1: is running on {vm1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -3904,17 +1270,21 @@ Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -3922,27 +1292,33 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -3952,84 +1328,117 @@ Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+mysql1: is running on {vm1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
+mysql1: is running on {vm1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4037,45 +1446,67 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -4085,50 +1516,63 @@ Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Invocation: running
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -4139,22 +1583,23 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -4163,97 +1608,131 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -4262,35 +1741,29 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -4299,77 +1772,79 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+mysql1: is running on {vm1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
@@ -4382,7 +1857,13 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4390,140 +1871,187 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+mysql1: is running on {vm1}	-----
 
+Invocation: running
+Invocation: running
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
 Invocation: running
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+mysql1: is running on {vm1}	-----
 
 Invocation: running
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 Invocation: running
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
+mysql1: is running on {vm1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -4536,14 +2064,27 @@ mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4551,52 +2092,63 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -4604,8 +2156,10 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
@@ -4613,36 +2167,48 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+mysql1: is running on {vm1}	-----
 
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4650,49 +2216,60 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -4702,31 +2279,33 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4737,93 +2316,93 @@ mysql1: is running on {vm1}	-----
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
 Invocation: running
+Monitor: {vm2} is {ready}.
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
+Invocation: VMready
 Invocation: running
-mysql1: is running on {vm1}	-----
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
@@ -4836,66 +2415,64 @@ mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-Invocation: running
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
@@ -4903,32 +2480,38 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -4940,43 +2523,43 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -4984,84 +2567,104 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -5069,13 +2672,10 @@ mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
@@ -5083,18 +2683,17 @@ Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
@@ -5103,714 +2702,152 @@ tomcat1: is running on {vm1}, connected to {mysql1}	-----
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 Invocation: running
+mysql1: is running on {vm1}	-----
+
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
+Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 mysql1_executor is informing to fail
 mysql1 was informed of a spontaneous transition fail
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: fail
 mysql1 {Active}: spontaneous FAILED	-----
 
-Invocation: stop
-Invocation: stop
-Invocation: makeError
-tomcat2: is stopped	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
+Invocation: running
 tomcat1: is stopped	-----
 
+Invocation: makeError
 mysql1 {Failure}: from Failing to Error	-----
 
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: start
-Invocation: running
 mysql1: is running on {vm1}	-----
 
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-mysql2: is running on {vm1}	-----
-
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-Invocation: running
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-	 check canRecover: mysql1	mysql2
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql2}	-----
-
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-mysql2_executor is informing to fail
-mysql2 was informed of a spontaneous transition fail
-Invocation: running
-Invocation: fail
-mysql2 {Active}: spontaneous FAILED	-----
-
-Invocation: running
-Invocation: running
-Invocation: stop
-Invocation: stop
-Invocation: makeError
-tomcat2: is stopped	-----
-
-tomcat1: is stopped	-----
-
-mysql2 {Failure}: from Failing to Error	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
 Invocation: running
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
 Invocation: start
-Invocation: running
-mysql2: is running on {vm1}	-----
-
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-Invocation: running
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-Invocation: running
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-	 check canRecover: mysql2	mysql1
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
@@ -5829,112 +2866,114 @@ Invocation: running
 mysql1: is running on {vm1}	-----
 
 Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
 Invocation: running
 Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
+tomcat2: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: VMready
+Monitor: {vm2} is {ready}.
+
+Invocation: running
+Invocation: running
+tomcat1: is running on {vm1}, connected to {mysql1}	-----
+
+Invocation: running
+mysql1: is running on {vm1}	-----
+
+Invocation: running
 tomcat2: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-Invocation: running
 tomcat1: is running on {vm1}, connected to {mysql1}	-----
 
 Invocation: running
 mysql1: is running on {vm1}	-----
 
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
-
-Invocation: running
-tomcat1: is running on {vm1}, connected to {mysql1}	-----
-
-tomcat2: is running on {vm1}, connected to {mysql1}	-----
-
-Invocation: running
-mysql1: is running on {vm1}	-----
+Invocation: VMready
+Monitor: {vm2} is {ready}.
 
 Invocation: running
