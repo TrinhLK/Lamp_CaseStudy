@@ -1,4 +1,4 @@
-package monitoring041;
+package monitoring04;
 
 import org.javabip.annotations.ComponentType;
 import org.javabip.annotations.Data;
@@ -25,21 +25,21 @@ import components.Components_States;
 	@Port(name = "fail", type = PortType.spontaneous)
 })
 @ComponentType(initial = "Undeployed", name = "monitor.Tomcat")
-public class C_Tomcat{
+public class C_ApacheTomcat{
 
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(C_Tomcat.class);
+	static final Logger logger = LoggerFactory.getLogger(C_ApacheTomcat.class);
 	String vId;
 	String depInfor;
 	VM_States vStates;
 	int runningTime;
 	
-	public C_Tomcat() {
+	public C_ApacheTomcat() {
 		state = Components_States.Undeployed;
 	}
 	
-	public C_Tomcat(String _id) {
+	public C_ApacheTomcat(String _id) {
 		id = _id;
 		state = Components_States.Undeployed;
 	}
@@ -140,10 +140,10 @@ public class C_Tomcat{
 	@Guard(name = "canStop")
 	public boolean canStop(@Data(name = "sqlInfo") String _dId) {
 		if (depInfor.equals(_dId)) {
-			logger.info("\t" + id + " can Stop: " + depInfor + " -- " + _dId);
+//			logger.info("\t" + id + " can Stop: " + depInfor + " -- " + _dId);
 			return true;
 		}else {
-			logger.info("\t" + id + " cannot Stop: " + depInfor + " -- " + _dId);
+//			logger.info("\t" + id + " cannot Stop: " + depInfor + " -- " + _dId);
 			return false;
 		}
 //		return (depInfor.equals(_dId));

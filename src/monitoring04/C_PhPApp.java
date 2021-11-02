@@ -8,40 +8,30 @@ import org.javabip.annotations.Ports;
 import org.javabip.annotations.Transition;
 import org.javabip.annotations.Transitions;
 import org.javabip.api.PortType;
-import org.javabip.api.DataOut.AccessType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import components.Components_States;
 
-@Ports({
-	@Port(name = "deploy", type = PortType.enforceable),
-	@Port(name = "undeploy", type = PortType.enforceable),
-	@Port(name = "configure", type = PortType.enforceable),
+@Ports({ 
 	@Port(name = "start", type = PortType.enforceable),
+	@Port(name = "active", type = PortType.enforceable),
+	@Port(name = "fail", type = PortType.enforceable),
+	@Port(name = "pause", type = PortType.enforceable),
 	@Port(name = "running", type = PortType.enforceable),
-	@Port(name = "stop", type = PortType.enforceable),
-	@Port(name = "makeError", type = PortType.enforceable),
-	@Port(name = "fail", type = PortType.spontaneous)
+	@Port(name = "delete", type = PortType.enforceable) 
 })
-@ComponentType(initial = "Undeployed", name = "monitor.Tomcat")
-public class C_Tomcat{
-
+@ComponentType(initial = "off", name = "monitor.C_PhPApp")
+public class C_PhPApp {
 	String id;
 	Components_States state;
-	static final Logger logger = LoggerFactory.getLogger(C_Tomcat.class);
 	String vId;
 	String depInfor;
-	VM_States vStates;
-	int runningTime;
+	static final Logger logger = LoggerFactory.getLogger(C_PhPApp.class);
 	
-	public C_Tomcat() {
-		state = Components_States.Undeployed;
-	}
-	
-	public C_Tomcat(String _id) {
+	public C_PhPApp(String _id) {
+		// TODO Auto-generated constructor stub
 		id = _id;
-		state = Components_States.Undeployed;
 	}
 	
 	/**
@@ -62,9 +52,7 @@ public class C_Tomcat{
 	public void undeploy() {
 		logger.info(id + ": is undeployed" + "\t-----\n");
 		vId = "";
-		depInfor = "";
 		state = Components_States.Undeployed;
-		runningTime = 0;
 	}
 	
 	@Transitions({
@@ -75,10 +63,8 @@ public class C_Tomcat{
 //		@Transition(name = "start", source = "InActive", target = "Active", guard = "canStart")
 	})
 	public void start(@Data(name = "sqlInfo") String _dId) {
-		depInfor = _dId;
 		logger.info(id + ": is running on {" + vId + "}, connected to {" + depInfor + "}\t-----\n");
 		state = Components_States.Active;
-		runningTime++;
 	}
 	
 	@Transitions({
@@ -88,9 +74,7 @@ public class C_Tomcat{
 	public void spontaneousFail() {
 		logger.info(id + " {" + state + "}: spontaneous FAILED" + "\t-----\n");
 		state = Components_States.Failure;
-		depInfor = "";
 		vId = "";
-		runningTime = 0;
 	}
 	
 	@Transitions({
@@ -106,52 +90,6 @@ public class C_Tomcat{
 	public void stop() {
 		logger.info(id + ": is stopped" + "\t-----\n");
 		state = Components_States.Inactive;
-//		depInfor = "";
-		runningTime = 0;
-	}
-	
-	/**
-	 * DATA & GUARDS
-	 * */
-	@Data(name = "tomcatInfo", accessTypePort = AccessType.any)
-	public String sqlId() {
-		return id;
-	}
-	
-	@Guard(name = "canStart")
-	public boolean canStart(@Data(name = "sqlInfo") String _dId) {
-//		logger.info(id + "\t---\t" + _dId);
-		if (depInfor == null || depInfor.equals("")) {
-			depInfor = _dId;
-		}
-		return (depInfor.equals(_dId));
-	}
-	
-	@Guard(name = "canRecover")
-	public boolean canRecover(@Data(name = "sqlInfo") String _dId) {
-//		logger.info(id + "\t---\t" + _dId);
-		if (!depInfor.equals(_dId)) {
-			logger.info("\t check canRecover: " + depInfor + "\t" + _dId);
-			return true;
-		}
-		return false;
-	}
-	
-	@Guard(name = "canStop")
-	public boolean canStop(@Data(name = "sqlInfo") String _dId) {
-		if (depInfor.equals(_dId)) {
-//			logger.info("\t" + id + " can Stop: " + depInfor + " -- " + _dId);
-			return true;
-		}else {
-//			logger.info("\t" + id + " cannot Stop: " + depInfor + " -- " + _dId);
-			return false;
-		}
-//		return (depInfor.equals(_dId));
-	}
-	
-	@Guard(name = "canFail")
-	public boolean canFail() {		
-		return true;
 	}
 	
 	@Guard(name = "canDeploy")
@@ -161,35 +99,4 @@ public class C_Tomcat{
 		}
 		return (vId.equals(_vId));
 	}
-	
-	@Guard(name = "followingShutdown")
-	public boolean followingShutdown(@Data(name = "vId") String _vId) {
-		String[] infor = _vId.split("-");
-		if (this.vId.contains(infor[0])) {
-			return true;
-		}
-		return false;
-	}
-	
-	@Guard(name = "canStopTomcat")
-	public boolean canStopTomcat(@Data(name = "sqlInfo") String _dId) {
-		if (depInfor.equals(_dId)) {
-			return true;
-		}
-		return false;
-//		String[] split = _dId.split("-");
-//		
-//		if (this.depInfor.contains(split[0])) {
-////			logger.info("\tCheck STOP " + id + ": " + depInfor + " -- " + _dId + ": " + split[0] + "\n");
-//			if (_dId.contains("InActive") || _dId.contains("Failure")) {
-//				depInfor = _dId;
-//				state = Components_States.Inactive;
-//				logger.info(id + " should STOP");
-//				return true;
-//			}
-//		}
-//		return false;
-	}
-
 }
-

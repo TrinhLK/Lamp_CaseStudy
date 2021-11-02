@@ -32,8 +32,8 @@ public class MonitorTestFile_04 {
     	C_VirtualMachine vm2 = new C_VirtualMachine("vm2");
     	C_MySQL mysql1 = new C_MySQL("mysql1");
     	C_MySQL mysql2 = new C_MySQL("mysql2");
-    	C_Tomcat tomcat1 = new C_Tomcat("tomcat1");
-    	C_Tomcat tomcat2 = new C_Tomcat("tomcat2");
+    	C_ApacheTomcat tomcat1 = new C_ApacheTomcat("tomcat1");
+    	C_ApacheTomcat tomcat2 = new C_ApacheTomcat("tomcat2");
 //    	Apache apache1 = new Apache("apache1");
 //    	Apache apache2 = new Apache("apache2");
     	

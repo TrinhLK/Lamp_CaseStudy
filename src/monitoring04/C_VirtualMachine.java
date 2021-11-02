@@ -28,7 +28,7 @@ public class C_VirtualMachine {
 	static final Logger logger = LoggerFactory.getLogger(C_VirtualMachine.class);
 	int runningTime;
 	
-public C_VirtualMachine() {
+	public C_VirtualMachine() {
 		
 	}
 	
